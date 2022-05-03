@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,144 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="vdf-BF-3pK">
+                                <rect key="frame" x="52" y="538" width="310" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NN1-Bu-1dp">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.65966492889999995" green="0.48391675950000002" blue="0.37201443309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="fHh-8v-jrt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="◀︎ ">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="backButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vhg-Nc-BEo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCS-hq-7Ee">
+                                        <rect key="frame" x="80" y="0.0" width="150" height="60"/>
+                                        <color key="backgroundColor" red="0.65966492889999995" green="0.48391675950000002" blue="0.37201443309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="rGp-7t-Vlk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="再生 / 停止">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="slideShowButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TyO-MA-C15"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ij7-Ye-qSd">
+                                        <rect key="frame" x="250" y="0.0" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.65966492889999995" green="0.48391675950000002" blue="0.37201443309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Fnk-W4-enn"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="▶︎">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="nextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFY-s5-CRd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="QNp-HU-sfl"/>
+                                    <constraint firstItem="DCS-hq-7Ee" firstAttribute="centerY" secondItem="vdf-BF-3pK" secondAttribute="centerY" id="XER-Mc-ow3"/>
+                                    <constraint firstItem="DCS-hq-7Ee" firstAttribute="centerY" secondItem="vdf-BF-3pK" secondAttribute="centerY" id="i4M-Pw-334"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cafe1" translatesAutoresizingMaskIntoConstraints="NO" id="OfQ-PY-biC">
+                                <rect key="frame" x="47" y="288" width="320" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="1nj-uu-nvt"/>
+                                    <constraint firstAttribute="height" constant="200" id="kKc-5J-XhR"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="yGW-Aj-oLR" appends="YES" id="GM7-Qm-zoE"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.99614053960000004" green="0.86113351579999997" blue="0.78468799590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vdf-BF-3pK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="12m-I1-sM5"/>
+                            <constraint firstItem="OfQ-PY-biC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H1F-t5-IJJ"/>
+                            <constraint firstItem="vdf-BF-3pK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="JQD-fK-R5m"/>
+                            <constraint firstItem="OfQ-PY-biC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-60" id="MMC-G2-juI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="OfQ-PY-biC" id="HVy-2s-uSm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="yGW-Aj-oLR">
+                    <connections>
+                        <action selector="imageViewTapped:" destination="BYZ-38-t0r" id="MrC-Co-46r"/>
+                        <segue destination="V3R-9Y-acB" kind="show" id="dM0-nz-g18"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-825" y="-796"/>
+        </scene>
+        <!--Preview View Controller-->
+        <scene sceneID="9T8-3R-HVC">
+            <objects>
+                <viewController id="V3R-9Y-acB" customClass="PreviewViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9tT-XZ-XnH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Ffl-Wn-Sno">
+                                <rect key="frame" x="-114" y="221" width="641" height="400"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ApI-hv-Qgm"/>
+                        <color key="backgroundColor" red="0.99614053960000004" green="0.86113351579999997" blue="0.78468799590000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w0h-Vh-nE9"/>
+                    <connections>
+                        <outlet property="imageView2" destination="Ffl-Wn-Sno" id="zjB-re-0SP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="449-Ka-WI7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-91" y="-796"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cafe1" width="250" height="166.5"/>
+    </resources>
 </document>
